@@ -31,7 +31,7 @@
                 <li><a href="/" class="nav-link px-2 link-secondary">Accueil</a></li>
                 <li><a href="#" class="nav-link px-2">Menu</a></li>
                 <li><a href="recettes.php" class="nav-link px-2">Nos recettes</a></li>
-                <li><a href="#" class="nav-link px-2">FAQs</a></li>
+                <li><a href="ajout_modif-recette.php" class="nav-link px-2">Ajout/Modif recette</a></li>
                 <li><a href="#" class="nav-link px-2">A propos</a></li>
             </ul>
 
