@@ -1,3 +1,7 @@
+<?php
+    require_once('lib/pdo.php');
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 

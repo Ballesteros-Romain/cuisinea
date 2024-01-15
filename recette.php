@@ -2,10 +2,8 @@
     require_once('templates/header.php');
     require_once('lib/recipe.php');
     require_once('lib/tools.php');
-    $id = $_GET['id'];
     // var_dump($recipes[$id]);
 
-    $pdo = new PDO("mysql:dbname=cuisinea;host=localhost:8889;charset=utf8mb4", "root", "root");
 
     $id = (int)$_GET['id'];
     $recipe = getRecipesById($pdo, $id);
@@ -14,7 +12,7 @@
     $instructions = linesToArray($recipe['instructions']);
 ?>
 <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
-    <h1 class="title-recipes">Recette de <?= $recipe['title'] ?> </h1>
+    <h1 class="title-recipes"><?= $recipe['title'] ?> </h1>
 </div>
 
 <!-- Recipes -->
