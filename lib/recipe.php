@@ -7,7 +7,7 @@
         }
 
         function getRecipes(PDO $pdo, int $limit = null){
-            $sql = 'SELECT * FROM recipes ORDER BY RAND() DESC';
+            $sql = 'SELECT * FROM recipes ORDER BY id DESC';
             if ($limit) {
                 $sql .= ' LIMIT :limit';
             }
