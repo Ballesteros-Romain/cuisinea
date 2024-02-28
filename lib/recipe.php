@@ -30,4 +30,16 @@
             $query->bindParam(':image', $image, PDO::PARAM_STR);
             return $query->execute();
         }
+
+        function deleteRecipe(PDO $pdo, int $id)
+{
+    $sql = "DELETE FROM recipes WHERE recipes.id = :id;";
+    $query = $pdo->prepare($sql);
+    $query->bindParam(':id', $id, PDO::PARAM_INT);
+    return $query->execute();
+}
+if (isset ($_POST['deleted'])){
+    $recipedId = $_POST['reciped'];
+    $success = deleteRecipe($pdo, $recipeId);
+}
     ?>

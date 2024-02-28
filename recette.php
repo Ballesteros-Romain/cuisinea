@@ -10,6 +10,11 @@
 
     $ingredients = linesToArray($recipe['ingredients']);
     $instructions = linesToArray($recipe['instructions']);
+
+    if (isset($_GET['id'])) {
+    $recipeId = $_GET['id'];
+    $success = deleteRecipe($pdo, $recipeId);
+}
 ?>
 <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
     <h1 class="title-recipes"><?= $recipe['title'] ?> </h1>
@@ -38,6 +43,16 @@
         </div>
     </div>
 </div>
+<!-- <form method="POST">
+    <a href="recettes.php?id=<?= $recipe['id']; ?>" name="deleted"
+        class="btn btn-danger d-flex justify-content-center">Supprimer</a>
+</form> -->
+<form method="POST">
+    <input type="hidden" name="recipeId" value="<?= $recipe['id']; ?>">
+    <button type="submit" name="deleteRecipe" class="btn btn-danger d-flex justify-content-center">Supprimer</button>
+</form>
+
+
 
 <?php 
         require_once('templates/footer.php')
